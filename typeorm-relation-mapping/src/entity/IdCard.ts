@@ -1,0 +1,28 @@
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
+import { User } from "./User";
+
+@Entity()
+export class IdCard {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column({
+    length: 50,
+    comment: "身份证号",
+  })
+  cardName: string;
+
+  @JoinColumn()
+  @OneToOne(() => User, {
+    onDelete: "CASCADE",
+    onUpdate: "CASCADE",
+    cascade: true,
+  })
+  user: User;
+}
