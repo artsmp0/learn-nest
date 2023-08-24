@@ -4,7 +4,7 @@ import { User } from "./entity/User";
 
 /*
 是的，如果 idcard 表有一个 userId 外键，那么在这种情况下，idcard 表将被称为从表（子表），而与之关联的 userId 所在的表将被称为主表（父表）。
-
+被引用的表叫主表
 具体来说，如果你的数据库模型如下：
 
 主表（父表）: 用户表（User），包含 userId 列作为主键。
