@@ -5,7 +5,6 @@ import {
   Injectable,
   UnauthorizedException,
 } from '@nestjs/common';
-import { Observable } from 'rxjs';
 import { UserService } from './user/user.service';
 import { Request } from 'express';
 import { Permission } from './user/entities/rbac.entity';
